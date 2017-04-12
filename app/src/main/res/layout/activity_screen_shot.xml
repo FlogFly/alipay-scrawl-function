@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是启动页，点击下方截图按钮，然后截图，并且进去到涂鸦界面。"
+        android:textColor="@android:color/black"
+        />
+
+
+    <Button
+        android:id="@+id/screen_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="截图"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
