@@ -7,9 +7,7 @@ import android.os.Environment;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.scrawldemo.config.AnnotationConfig;
@@ -29,8 +27,6 @@ public class ScrawlActivity extends AppCompatActivity {
     RadioGroup colorGroup;
     @BindView(R.id.board_view)
     ScrawlBoardView boardView;
-    @BindView(R.id.scraw_group)
-    RelativeLayout scrawGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,22 +41,15 @@ public class ScrawlActivity extends AppCompatActivity {
         boardView.post(new Runnable() {
             @Override
             public void run() {
-                final Bitmap resizeBitmap = BitmapUtil.resizeBitmap(bitmap,scrawGroup);
+                final Bitmap resizeBitmap = BitmapUtil.resizeBitmap(bitmap,boardView);               
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         boardView.setBackgroud(resizeBitmap);
                     }
                 });
-
-                ViewGroup.LayoutParams params = scrawGroup.getLayoutParams();
-                params.height = resizeBitmap.getHeight();
-                params.width = resizeBitmap.getWidth();
-                scrawGroup.setLayoutParams(params);
-
             }
         });
-
 
         colorGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

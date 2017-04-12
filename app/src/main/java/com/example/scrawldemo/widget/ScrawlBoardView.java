@@ -85,6 +85,11 @@ public class ScrawlBoardView extends View {
         }
     }
 
+    /**
+     * 设置背景图片及监理新的用来涂鸦的Bitmap
+     *
+     * @param bitmap 传入的截图界面图片
+     */
     public void setBackgroud(Bitmap bitmap) {
         this.backgroudBitmap = bitmap;
         this.bitmap = Bitmap.createBitmap(backgroudBitmap.getWidth(), backgroudBitmap.getHeight(), Bitmap.Config.ARGB_8888);
