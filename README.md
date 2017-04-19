@@ -13,4 +13,4 @@
 
 效果图：
 
-![仿支付宝涂鸦](http://i.imgur.com/BTRwq6s.png)
+![仿支付宝涂鸦](https://dn-mhke0kuv.qbox.me/62db6d79227c02990da0.png)
